@@ -1,0 +1,24 @@
+{
+  "require-dev": {
+    "behat/behat": "3.*@stable",
+    "behat/mink": "@stable",
+    "behat/mink-extension": "@stable",
+    "behat/mink-goutte-driver": "@stable",
+    "drupal/drupal-extension": "3.2.2",
+    "guzzlehttp/guzzle" : "^6.0@dev",
+    "jakoch/phantomjs-installer":   "2.1.1-p07",
+    "emuse/behat-html-formatter":   "*",
+    "bex/behat-screenshot":         "*"
+  },
+  "config": {
+    "bin-dir": "bin"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "PhantomInstaller\\Installer::installPhantomJS"
+    ],
+    "post-update-cmd": [
+      "PhantomInstaller\\Installer::installPhantomJS"
+    ]
+  }
+}

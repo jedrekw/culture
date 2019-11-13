@@ -1,0 +1,35 @@
+default:
+  suites:
+    default:
+      contexts:
+        - FeatureContext
+        - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\MinkContext
+        - Drupal\DrupalExtension\Context\DrushContext
+        - Drupal\DrupalExtension\Context\MessageContext
+  extensions:
+    Behat\MinkExtension:
+      selenium2:
+        browser: chrome
+        wd_host: http://localhost:4444/wd/hub
+      files_path: %paths.base%/features/files/
+      base_url: "http://iam:s7k0l4n1e@staging.culture.pl/pl"
+
+#phantomjs:
+#    suites:
+#      default:
+#        contexts:
+#          - FeatureContext
+#          - Drupal\DrupalExtension\Context\DrupalContext
+#          - Drupal\DrupalExtension\Context\MinkContext
+#          - Drupal\DrupalExtension\Context\DrushContext
+#          - Drupal\DrupalExtension\Context\MessageContext
+#          - Behat\MinkExtension\Context
+#    extensions:
+#        Behat\MinkExtension:
+#            selenium2:
+#                browser: PhantomJS
+#                wd_host: http://localhost:4444/wd/hub
+#            base_url: "http://iam:s7k0l4n1e@staging.culture.pl/pl"
+#
+
